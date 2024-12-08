@@ -1,3 +1,8 @@
+TIC TAC TOE 
+A game which you all have played in your childhood.
+Made this game using Reactjs.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
