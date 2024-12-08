@@ -1,0 +1,37 @@
+body{
+  background-color:cadetblue;
+}
+
+.blank{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.a{
+  height:20px;
+  width:100px;
+  border:2px solid black;
+  margin:30px;
+  text-align: center;
+}
+.b{
+  height:20px;
+  width:100px;
+  border:2px solid black;
+  margin:30px;
+  text-align: center;
+}
+.c{
+  height:20px;
+  width:100px;
+  border:2px solid black;
+  margin:30px;
+  text-align: center;
+}
+.d{
+  height:20px;
+  width:100px;
+  border:2px solid black;
+  margin:30px;
+  text-align: center;
+}
