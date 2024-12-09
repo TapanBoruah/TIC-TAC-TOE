@@ -1,7 +1,7 @@
 import React ,{useState} from 'react';
 import Square from './Square';
 
-const Board=()=>{
+const Game=()=>{
     const [state, setState]=useState(Array(9).fill(null));
     const[isXTurn,setIsXTurn]=useState(true);
 
@@ -25,9 +25,9 @@ const Board=()=>{
     return false;
 }
 
-    const isWinner=checkWinner();
+    const Winner=checkWinner();
 
-    const handleClick=(index)=>{
+    const Click=(index)=>{
         if(state[index]!==null){
             return;
         }
@@ -37,36 +37,35 @@ const Board=()=>{
         setIsXTurn(!isXTurn);
     }
 
-    const handleReset=()=>{
+    const Reset=()=>{
         setState(Array(9).fill(null));
     }
     return(
     <div className='main'>
         <h1 className='game-name'>TIC TAC TOE</h1>
         <div className="container">
-
-            {isWinner?<h2 className='winner'>{isWinner} ,Won the Game <button onClick={handleReset} className='play-again'>PLay Again</button></h2>:
+            {Winner?<h2 className='winner'>{Winner} ,Won the Game <button onClick={Reset} className='play-again'>PLay Again</button></h2>:
             <>
             <h4 className='turn'>{isXTurn?'X':'O'} Turn</h4>            
             <div className="board-row">
-                <Square onClick={()=>handleClick(0)} value={state[0]}/>
-                <Square onClick={()=>handleClick(1)} value={state[1]}/>
-                <Square onClick={()=>handleClick(2)} value={state[2]}/>
+                <Square onClick={()=>Click(0)} value={state[0]}/>
+                <Square onClick={()=>Click(1)} value={state[1]}/>
+                <Square onClick={()=>Click(2)} value={state[2]}/>
             </div>
             <div className="board-row">
-                <Square onClick={()=>handleClick(3)} value={state[3]}/>
-                <Square onClick={()=>handleClick(4)} value={state[4]}/>
-                <Square onClick={()=>handleClick(5)} value={state[5]}/>
+                <Square onClick={()=>Click(3)} value={state[3]}/>
+                <Square onClick={()=>Click(4)} value={state[4]}/>
+                <Square onClick={()=>Click(5)} value={state[5]}/>
             </div>
             <div className="board-row">
-                <Square onClick={()=>handleClick(6)} value={state[6]}/>
-                <Square onClick={()=>handleClick(7)} value={state[7]}/>
-                <Square onClick={()=>handleClick(8)} value={state[8]}/>
+                <Square onClick={()=>Click(6)} value={state[6]}/>
+                <Square onClick={()=>Click(7)} value={state[7]}/>
+                <Square onClick={()=>Click(8)} value={state[8]}/>
             </div>
-            <button onClick={handleReset} className='reset'>Reset</button>
+            <button onClick={Reset} className='reset'>Reset</button>
             </>}
         </div>
     </div>
     )
 }
-export default Board;
+export default Game;
