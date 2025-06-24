@@ -1,0 +1,7 @@
+{
+    "editor.wordWrap": "on",
+    "workbench.editor.wrapTabs": true,
+    "chat.editor.wordWrap": "on",
+    "html.format.wrapAttributes": "force",
+    "prettier.proseWrap": "always"
+}
