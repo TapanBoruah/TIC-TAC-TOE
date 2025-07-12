@@ -1,63 +1,73 @@
 .main{
-    height: 100vh;
+    height:100vh;
     background-color: rgb(18, 6, 4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:3rem;
+}
+.board-container{
+    display:flex; 
 }
 .board-row{
     display:flex;
+    flex-direction: column;
     justify-content:center;
     align-items: center;
 }
 .Text-move{
+    font-size: 4rem;
     -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: rgb(9, 3, 3);
-}
-.square{
-
+    -webkit-text-stroke-color: rgb(243, 236, 236);
 }
 .reset{
-    position: relative;
-    left:39vw;
-    top:3vh;
-    font-size:2vw;
+    font-size:2rem;
     font-weight: 700;
     border-radius: 10%;
 }
 .game-name{
-    text-align: center;
     color:white;
-    font-size:5vw;
+    font-size:5rem;
     font-weight: 800;
     -webkit-text-stroke:3px;
     -webkit-text-stroke-color: blue;
 }
 .turn{
-    position: relative;
-    left:39vw;
-    top:-2vh;
     text-align: center;
-    height:5vh;
-    width:6vw;
+    height:2rem;
+    width:6rem;
     border:2px solid rgb(19, 19, 71);
     border-radius:8px;
     background-color: rgb(56, 56, 235);
     color:white;
 }
 .container{ 
-    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.result{
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
 }
 .winner{
-    position: relative;
-    top:20vh;
-    left:7vw;
-    font-size: 2.5vw;
     text-align: center;
+    justify-self: center;
+    align-self: center;
+    font-size: 2.5rem;
     color:white;
 }
 .play-again{
-    position: relative;
-    top:10vh;
-    left:-18vw;
     border-radius: 20px;
     color:black;
     font-weight: 600;
+}
+@media only screen and (max-width: 480px){
+    .game-name{
+        margin-top:6rem;
+        font-size: 3rem;
+    }
+    
 }

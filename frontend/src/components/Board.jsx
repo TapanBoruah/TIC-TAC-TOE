@@ -44,23 +44,26 @@ const Game=()=>{
     <div className='main'>
         <h1 className='game-name'>TIC TAC TOE</h1>
         <div className="container">
-            {Winner?<h2 className='winner'>{Winner} ,Won the Game <button onClick={Reset} className='play-again'>PLay Again</button></h2>:
+            {Winner?<h2 className='winner result'>{Winner} ,Won the Game<button onClick={Reset} className='play-again'>PLay Again</button></h2>:
             <>
-            <h4 className='turn'>{isXTurn?'X':'O'} Turn</h4>            
-            <div className="board-row">
-                <Square onClick={()=>Click(0)} value={state[0]}/>
-                <Square onClick={()=>Click(1)} value={state[1]}/>
-                <Square onClick={()=>Click(2)} value={state[2]}/>
-            </div>
-            <div className="board-row">
-                <Square onClick={()=>Click(3)} value={state[3]}/>
-                <Square onClick={()=>Click(4)} value={state[4]}/>
-                <Square onClick={()=>Click(5)} value={state[5]}/>
-            </div>
-            <div className="board-row">
-                <Square onClick={()=>Click(6)} value={state[6]}/>
-                <Square onClick={()=>Click(7)} value={state[7]}/>
-                <Square onClick={()=>Click(8)} value={state[8]}/>
+            <h4 className="turn">{isXTurn?'X':'O'} Turn</h4>  
+            <div className="board-container">
+            
+                <div className="board-row">
+                    <Square onClick={()=>Click(0)} value={state[0]}/>
+                    <Square onClick={()=>Click(1)} value={state[1]}/>
+                    <Square onClick={()=>Click(2)} value={state[2]}/>
+                </div>
+                <div className="board-row">
+                    <Square onClick={()=>Click(3)} value={state[3]}/>
+                    <Square onClick={()=>Click(4)} value={state[4]}/>
+                    <Square onClick={()=>Click(5)} value={state[5]}/>
+                </div>
+                <div className="board-row">
+                    <Square onClick={()=>Click(6)} value={state[6]}/>
+                    <Square onClick={()=>Click(7)} value={state[7]}/>
+                    <Square onClick={()=>Click(8)} value={state[8]}/>
+                </div>          
             </div>
             <button onClick={Reset} className='reset'>Reset</button>
             </>}

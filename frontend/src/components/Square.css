@@ -1,0 +1,20 @@
+.square{
+    border:3px solid blue;
+    border-radius: 5%;
+    box-shadow: inherit;
+    height:8rem;
+    width:8rem;
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(86, 238, 238);
+}
+
+@media only screen and (max-width: 480px){
+    .square{
+        height:6rem;
+        width:6rem;
+    }
+    
+}
